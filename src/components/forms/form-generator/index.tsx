@@ -35,7 +35,7 @@ const FormGenerator = ({
   switch (inputType) {
     case "input":
       return (
-        <Label className="flex flex-col gap-2" htmlFor={`input-${name}`}>
+        <Label className="flex flex-col gap-2 w-full" htmlFor={`input-${name}`}>
           {label && label}
           <Input
             id={`input-${name}`}

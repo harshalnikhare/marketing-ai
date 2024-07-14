@@ -2,7 +2,7 @@
 
 import { Loader } from "@/components/loader";
 import { AuthContextProvider } from "@/context/use-auth-context";
-import { useSignUpForm } from "@/hooks/sign-up/use-sign-up";
+import { useSignInForm } from "@/hooks/sign-in/use-sign-in";
 import React from "react";
 import { FormProvider } from "react-hook-form";
 
@@ -10,8 +10,9 @@ type Props = {
   children: React.ReactNode;
 };
 
-const SignUpFormProvider = ({ children }: Props) => {
-  const { methods, onHandleSubmit, loading } = useSignUpForm();
+const SignInFormProvider = ({ children }: Props) => {
+  const { methods, onHandleSubmit, loading } = useSignInForm();
+
   return (
     <AuthContextProvider>
       <FormProvider {...methods}>
@@ -25,4 +26,4 @@ const SignUpFormProvider = ({ children }: Props) => {
   );
 };
 
-export default SignUpFormProvider;
+export default SignInFormProvider;
